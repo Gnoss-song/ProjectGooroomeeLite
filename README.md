@@ -23,7 +23,7 @@
 
 ---
 
-## **[ WorkFlow ]**
+## **[ Preview ]**
 
 GooroomeeLite PDF 예정
 
