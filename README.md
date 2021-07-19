@@ -52,7 +52,6 @@ GooroomeeLite PDF 예정
 - ConstraintLayout
 - RelativeLayout
 - [ViewPager2](https://developer.android.com/jetpack/androidx/releases/viewpager2?hl=ko)
-- 
 
  3. Function
 
