@@ -61,6 +61,15 @@ GooroomeeLite PDF 예정
 
 ---
 
+## **[ Role ]**
+
+- Devleopment leading
+
+- Mypage
+
+- FirebaseData Management
+
+---
 ### **[ Feature Implementation ]**
 
 - 회원가입,비밀번호찾기
