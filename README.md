@@ -107,3 +107,17 @@ GooroomeeLite PDF 예정
 - 플레이스토어 연결
 - 앱 버전 체크
 - 로그아웃, 탈퇴 기능 구현
+
+---
+
+### **[ Tools ]**
+
+- AndroidStudio
+
+- Figma
+
+- Slack
+
+- Github
+
+- Notion
