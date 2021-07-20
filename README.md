@@ -65,9 +65,13 @@ GooroomeeLite PDF 예정
 
 - Devleopment leading
 
+- FirebaseData Management
+
 - Mypage
 
-- FirebaseData Management
+- Login
+
+- MediaPlayer
 
 ---
 ### **[ Feature Implementation ]**
