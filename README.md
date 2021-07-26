@@ -95,6 +95,9 @@ GooroomeeLite PDF 예정
       — ViewPager2를 이용한 온보딩 구현
 
       — 스플래시에 JobScheduler 구현
+      
+      — indicator 
+      
 
 - SeekBar, ProgressBar 구현
 - Firebasedatabase와 연동하여 데이터 관리
@@ -116,6 +119,12 @@ GooroomeeLite PDF 예정
       — 구글 로그인과 일반 이메일 로그인을 구분
 
       — 앨범을 통한 사진 세팅, 파이어베이스와 통신
+      
+- 뽀모도로 타이머 구현
+
+      — SharedPreference를 이용하여 일반 타이머와 뽀모도로 타이머의 모드 설정
+
+      — 
 
 - 플레이스토어 연결
 - 앱 버전 체크
