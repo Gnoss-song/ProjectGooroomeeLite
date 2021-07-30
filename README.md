@@ -124,7 +124,6 @@ GooroomeeLite PDF 예정
 
       — SharedPreference를 이용하여 일반 타이머와 뽀모도로 타이머의 모드 설정
 
-      — 
 
 - 플레이스토어 연결
 - 앱 버전 체크
