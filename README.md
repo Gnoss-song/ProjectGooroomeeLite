@@ -26,7 +26,7 @@
 ## **[ Preview ]**
 
 GooroomeeLite PDF 예정
-
+[GooroomeeLite PDF file](https://github.com/Gnoss-song/ProjectGooroomeeLite/blob/develop/GooroomeeLite.pdf)
 ---
 
 ![1](https://user-images.githubusercontent.com/79887378/127723015-b90a1d22-5b8d-49b9-b600-e5ff83f2ec45.PNG)
