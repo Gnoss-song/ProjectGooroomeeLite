@@ -1,11 +1,8 @@
 package kr.co.gooroomeelite.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.gooroomeelite.databinding.ItemRecyclerviewOpensourceBinding
 import kr.co.gooroomeelite.databinding.ItemRecyclerviewPrivacyBinding
