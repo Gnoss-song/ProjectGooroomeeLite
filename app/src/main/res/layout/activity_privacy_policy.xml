@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.mypage.PrivacyPolicyActivity"
     android:paddingStart="20dp"
-    android:paddingEnd="20dp">
+    android:paddingEnd="20dp"
+    tools:context=".views.mypage.PrivacyPolicyActivity">
 
     <ImageView
         android:id="@+id/ic_back"

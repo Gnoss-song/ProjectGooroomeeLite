@@ -5,8 +5,8 @@
     android:layout_width="300dp"
     android:layout_height="260dp"
     android:background="@drawable/common_popup_background"
-    tools:context=".views.common.StudyTimerDialog"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".views.common.StudyTimerDialog">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -30,21 +30,20 @@
             android:layout_width="40dp"
             android:layout_height="120dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="30dp"
             android:theme="@style/AppTheme.NumberPicker"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/tv"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="30dp"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
             android:text=":"
             android:textSize="16sp"
-            android:layout_marginBottom="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/minute_picker"
             app:layout_constraintStart_toEndOf="@id/hour_picker" />
@@ -54,11 +53,11 @@
             android:layout_width="40dp"
             android:layout_height="120dp"
             android:layout_marginStart="24dp"
+            android:layout_marginBottom="30dp"
             android:theme="@style/AppTheme.NumberPicker"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tv"
-            android:layout_marginBottom="30dp" />
+            app:layout_constraintStart_toEndOf="@id/tv" />
 
         <View
             android:layout_width="match_parent"
@@ -70,38 +69,38 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:id="@+id/buttons"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:id="@+id/cancel_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:textColor="#EA3F3F"
-                android:text="취소" />
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="취소"
+            android:textAlignment="center"
+            android:textColor="#EA3F3F" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#EEEEEE" />
 
-            <TextView
-                android:id="@+id/ok_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="확인" />
+        <TextView
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="확인"
+            android:textAlignment="center" />
 
-        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.mypage.ProfileUpdateActivity"
-    android:onClick="hideKeyboard">
+    android:onClick="hideKeyboard"
+    tools:context=".views.mypage.ProfileUpdateActivity">
 
 
-<ImageView
+    <ImageView
         android:id="@+id/ic_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,32 +38,34 @@
         android:layout_width="67dp"
         android:layout_height="67dp"
         android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#EEEEEE"
         app:cardCornerRadius="100dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="#EEEEEE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
-    <androidx.cardview.widget.CardView
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="100dp"
-        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="100dp">
+
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:layout_gravity="center"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_gooroomee_logo" />
-        <ImageView
-            android:id="@+id/ic_camera"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_camera" />
+
+            <ImageView
+                android:id="@+id/ic_camera"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera" />
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
@@ -77,15 +79,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center_horizontal"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLength="6"
+        android:maxLines="1"
         android:paddingBottom="12dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:maxLines="1"
-        android:inputType="text"
-        android:lines="1"
         android:textStyle="bold"
-        android:maxLength="6"
-        android:imeOptions="actionDone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

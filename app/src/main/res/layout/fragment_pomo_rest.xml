@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         android:layout_centerVertical="true"
         android:format="00:00"
         android:textColor="@android:color/black"
-        android:textSize="60sp"  />
+        android:textSize="60sp" />
 
     <!-- 뽀모도로 휴식 시작 버튼-->
     <androidx.appcompat.widget.AppCompatButton
@@ -26,7 +25,7 @@
         android:layout_below="@+id/stopwatch"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:background="@drawable/ic_btn_start"/>
+        android:background="@drawable/ic_btn_start" />
 
     <!-- 뽀모도로 휴식 중지 버튼-->
     <androidx.appcompat.widget.AppCompatButton
@@ -36,7 +35,7 @@
         android:layout_below="@+id/stopwatch"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:background="@drawable/ic_btn_finish"/>
+        android:background="@drawable/ic_btn_finish" />
 
     <!-- 뽀모도로 휴식 완료, 다시시작 (계속) 버튼 같이 세트!!! -->
     <!-- 뽀모도로 휴식 완료 버튼-->
@@ -48,7 +47,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
 
-        android:background="@drawable/ic_btn_end"/>
+        android:background="@drawable/ic_btn_end" />
 
     <!-- 뽀모도로 집중 다시시작 버튼-->
     <androidx.appcompat.widget.AppCompatButton
@@ -56,11 +55,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/stopwatch"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/btn_end"
-        android:background="@drawable/ic_btn_restart"/>
+        android:background="@drawable/ic_btn_restart" />
 
 
     <!-- 화이트 노이즈 실행버튼-->
@@ -70,10 +69,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/stopwatch"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:layout_toLeftOf="@id/btn_start"
-        android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:drawableBottom="@drawable/ic_btn_noise" />
 
@@ -84,11 +83,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/stopwatch"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:layout_toRightOf="@id/btn_start"
-        android:layout_alignParentBottom="true"
         android:background="@color/white"
-        android:drawableBottom="@drawable/ic_btn_timermode"/>
+        android:drawableBottom="@drawable/ic_btn_timermode" />
 
 </RelativeLayout>

@@ -28,18 +28,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:orientation="horizontal"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
 
                     <ImageButton
                         android:id="@+id/cal_left_btn"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:background="@color/white"
                         android:paddingTop="19dp"
                         android:paddingBottom="19dp"
-                        android:background="@color/white"
                         android:src="@drawable/ic_statistics_left_btn"
                         app:tint="@drawable/statistics_calendar_button"
                         tools:ignore="UseAppTint" />
@@ -85,8 +85,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/title_day"
@@ -164,8 +164,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="28dp"
                     tools:ignore="MissingClass" />
 
@@ -179,8 +179,8 @@
                     android:gravity="center"
                     android:stateListAnimator="@null"
                     android:text="공부 기록 공유하기"
-                    android:textSize="14sp"
                     android:textColor="@color/studytime_text"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <View

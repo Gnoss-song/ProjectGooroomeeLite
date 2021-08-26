@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="450dp"
+    android:background="@drawable/btn_white3"
     android:orientation="horizontal"
     android:paddingStart="20dp"
-    android:paddingEnd="20dp"
-    android:background="@drawable/btn_white3">
+    android:paddingEnd="20dp">
 
     <TextView
         android:id="@+id/textView6"
@@ -50,11 +50,10 @@
             android:layout_height="32dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:button="@null"
             android:background="@drawable/custom_radio_button"
-            />
+            android:button="@null"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RadioButton
             android:id="@+id/iv_music2"
@@ -63,10 +62,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/view2"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_radio_button"
             android:button="@null"
-            android:background="@drawable/custom_radio_button" />
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RadioButton
             android:id="@+id/iv_music3"
@@ -75,10 +74,10 @@
             android:layout_marginTop="18dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/view3"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_radio_button"
             android:button="@null"
-            android:background="@drawable/custom_radio_button" />
+            app:layout_constraintBottom_toTopOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RadioButton
             android:id="@+id/iv_music4"
@@ -87,10 +86,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_radio_button"
             android:button="@null"
-            android:background="@drawable/custom_radio_button"/>
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RadioButton
             android:id="@+id/iv_music5"
@@ -99,19 +98,19 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/view5"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_radio_button"
             android:button="@null"
-            android:background="@drawable/custom_radio_button"/>
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="parent" />
     </RadioGroup>
-<!--    <ImageView-->
-<!--        android:id="@+id/iv_music1"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_playmusic" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_music1"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/view"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_playmusic" />-->
 
     <View
         android:id="@+id/view"
@@ -136,14 +135,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/iv_music2"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view2"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_playmusic" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_music2"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/view2"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_playmusic" />-->
 
     <View
         android:id="@+id/view2"
@@ -154,7 +153,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_music2" />
-
 
 
     <TextView
@@ -170,14 +168,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/iv_music3"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view3"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_playmusic" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_music3"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/view3"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_playmusic" />-->
 
     <View
         android:id="@+id/view3"
@@ -203,14 +201,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/iv_music4"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view4"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_playmusic" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_music4"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/view4"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_playmusic" />-->
 
     <View
         android:id="@+id/view4"
@@ -236,14 +234,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/iv_music5"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view5"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_playmusic" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_music5"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/view5"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_playmusic" />-->
 
     <View
         android:id="@+id/view5"

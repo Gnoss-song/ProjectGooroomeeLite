@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +8,7 @@
     tools:context=".views.home.StudyActivity">
 
 
-        <!-- 화면명(공부기록) -->
+    <!-- 화면명(공부기록) -->
     <TextView
         android:id="@+id/mode_name"
         android:layout_width="wrap_content"
@@ -24,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!-- 뒤로가기 -->
+    <!-- 뒤로가기 -->
     <ImageView
         android:id="@+id/btn_backwatch"
         android:layout_width="wrap_content"
@@ -47,8 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
 
     <!-- ASMR (백색소음) 버튼 -->
@@ -105,7 +103,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_timermode" />
 
 
-
     <!-- 공부현황 버튼-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_studynow"
@@ -160,68 +157,67 @@ app:layout_constraintLeft_toRightOf="@id/btn_timermode"
 app:layout_constraintRight_toRightOf="parent" /> -->
 
 
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="horizontal">-->
 
-<!--<LinearLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:orientation="horizontal">-->
+    <!--&lt;!&ndash; 화면명(공부기록) &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:id="@+id/mode_name"-->
+    <!--    android:layout_width="115dp"-->
+    <!--    android:layout_height="25dp"-->
+    <!--    android:layout_marginStart="160dp"-->
+    <!--    android:layout_marginTop="45dp"-->
+    <!--    android:layout_marginEnd="160dp"-->
+    <!--    android:gravity="center"-->
+    <!--    android:text=""-->
+    <!--    android:textColor="@color/black"-->
+    <!--    android:textSize="15sp" />-->
 
-<!--&lt;!&ndash; 화면명(공부기록) &ndash;&gt;-->
-<!--<TextView-->
-<!--    android:id="@+id/mode_name"-->
-<!--    android:layout_width="115dp"-->
-<!--    android:layout_height="25dp"-->
-<!--    android:layout_marginStart="160dp"-->
-<!--    android:layout_marginTop="45dp"-->
-<!--    android:layout_marginEnd="160dp"-->
-<!--    android:gravity="center"-->
-<!--    android:text=""-->
-<!--    android:textColor="@color/black"-->
-<!--    android:textSize="15sp" />-->
-
-<!--&lt;!&ndash; 뒤로가기 &ndash;&gt;-->
-<!--<ImageView-->
-<!--    android:id="@+id/btn_backwatch"-->
-<!--    android:layout_width="29dp"-->
-<!--    android:layout_height="34dp"-->
-<!--    android:layout_marginStart="1dp"-->
-<!--    android:layout_marginTop="44dp"-->
-<!--    android:clickable="true"-->
-<!--    app:srcCompat="@drawable/ic_btn_backwatch" />-->
-<!--</LinearLayout>-->
-
-
-<!--    &lt;!&ndash; 뒤로가기 &ndash;&gt;-->
-<!--<ImageView-->
-<!--android:id="@+id/btn_backwatch"-->
-<!--android:layout_width="32dp"-->
-<!--android:layout_height="32dp"-->
-<!--android:layout_marginLeft="335dp"-->
-<!--android:layout_marginTop="45dp"-->
-<!--android:clickable="true"-->
-<!--app:layout_constraintLeft_toRightOf="@id/mode_name"-->
-<!--app:layout_constraintRight_toRightOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent"-->
-<!--app:srcCompat="@drawable/ic_btn_backwatch" />-->
+    <!--&lt;!&ndash; 뒤로가기 &ndash;&gt;-->
+    <!--<ImageView-->
+    <!--    android:id="@+id/btn_backwatch"-->
+    <!--    android:layout_width="29dp"-->
+    <!--    android:layout_height="34dp"-->
+    <!--    android:layout_marginStart="1dp"-->
+    <!--    android:layout_marginTop="44dp"-->
+    <!--    android:clickable="true"-->
+    <!--    app:srcCompat="@drawable/ic_btn_backwatch" />-->
+    <!--</LinearLayout>-->
 
 
-<!--    &lt;!&ndash; 화면명(공부기록) &ndash;&gt;-->
-<!--<TextView-->
-<!--android:id="@+id/mode_name"-->
-<!--android:layout_width="115dp"-->
-<!--android:layout_height="25dp"-->
-<!--android:layout_marginStart="160dp"-->
-<!--android:layout_marginTop="45dp"-->
-<!--android:layout_marginEnd="160dp"-->
-<!--android:gravity="center"-->
-<!--android:text=""-->
-<!--android:textColor="@color/black"-->
-<!--android:textSize="15sp"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent" />-->
-<!--&ndash;&gt;-->
+    <!--    &lt;!&ndash; 뒤로가기 &ndash;&gt;-->
+    <!--<ImageView-->
+    <!--android:id="@+id/btn_backwatch"-->
+    <!--android:layout_width="32dp"-->
+    <!--android:layout_height="32dp"-->
+    <!--android:layout_marginLeft="335dp"-->
+    <!--android:layout_marginTop="45dp"-->
+    <!--android:clickable="true"-->
+    <!--app:layout_constraintLeft_toRightOf="@id/mode_name"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@drawable/ic_btn_backwatch" />-->
+
+
+    <!--    &lt;!&ndash; 화면명(공부기록) &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/mode_name"-->
+    <!--android:layout_width="115dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginStart="160dp"-->
+    <!--android:layout_marginTop="45dp"-->
+    <!--android:layout_marginEnd="160dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="15sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--&ndash;&gt;-->
 
     <!--<LinearLayout-->
     <!--    android:layout_width="match_parent"-->

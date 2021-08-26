@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,7 +44,7 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_focustime"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_focustime" />
 
 
         <ImageView
@@ -74,14 +73,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button1_set"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/text_view_pomodoro"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_restart"
             android:text="세팅"
             android:textColor="@color/white"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="@drawable/btn_restart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,14 +88,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_back"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/text_view_pomodoro"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_restart"
             android:text="초기화"
             android:textColor="@color/white"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="@drawable/btn_restart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -138,8 +137,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="120dp"
-            android:text="00:00"
             android:fontFamily="@font/helvetica_stopwatch"
+            android:text="00:00"
             android:textColor="#232323"
             android:textSize="56sp"
             app:layout_constraintEnd_toEndOf="parent"
