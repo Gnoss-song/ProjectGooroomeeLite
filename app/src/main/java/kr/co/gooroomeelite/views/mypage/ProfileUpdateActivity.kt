@@ -1,4 +1,5 @@
 package kr.co.gooroomeelite.views.mypage
+
 /**
  * @author Gnoss
  * @email silmxmail@naver.com
@@ -58,7 +59,7 @@ class ProfileUpdateActivity : AppCompatActivity() {
     var imm: InputMethodManager? = null
     private val maxlength = 6
     private val isLoading = MutableLiveData<Boolean>()
-    lateinit var currentPhotoPath : String
+    lateinit var currentPhotoPath: String
 
     private var storageRef: StorageReference? = null
     private lateinit var binding: ActivityProfileUpdateBinding
@@ -97,15 +98,19 @@ class ProfileUpdateActivity : AppCompatActivity() {
         }
         // 카메라 권한 요청
         fun requestPermission() {
-            ActivityCompat.requestPermissions(this, arrayOf(READ_EXTERNAL_STORAGE, CAMERA),
-                REQUEST_IMAGE_CAPTURE)
+            ActivityCompat.requestPermissions(
+                this, arrayOf(READ_EXTERNAL_STORAGE, CAMERA),
+                REQUEST_IMAGE_CAPTURE
+            )
         }
 
         // 카메라 권한 체크
         fun checkPersmission(): Boolean {
             return (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) ==
-                    PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
-                READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+                    PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
+                this,
+                READ_EXTERNAL_STORAGE
+            ) == PackageManager.PERMISSION_GRANTED)
         }
 
         // 권한요청 결과
@@ -117,8 +122,8 @@ class ProfileUpdateActivity : AppCompatActivity() {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults)
             if (requestCode == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Log.d("TAG", "Permission: " + permissions[0] + "was " + grantResults[0] + "카메라 허가")
-            }else{
-                Log.d("TAG","카메라 허가 필요")
+            } else {
+                Log.d("TAG", "카메라 허가 필요")
             }
         }
 
@@ -165,11 +170,10 @@ class ProfileUpdateActivity : AppCompatActivity() {
             val defaultButton = mAlbumView.findViewById<TextView>(R.id.btn_default)
             val photoButton = mAlbumView.findViewById<TextView>(R.id.btn_takephoto)
 
-            photoButton.setOnClickListener{
-                if (checkPersmission()){
+            photoButton.setOnClickListener {
+                if (checkPersmission()) {
                     dispatchTakePictureIntent()
-                }
-                else{
+                } else {
                     requestPermission()
                 }
             }
@@ -242,33 +246,34 @@ class ProfileUpdateActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK)
         }
     }
+
     private fun contentUploadDefault() {
         val num: String = getUid()!!
         val filename = "profile$num.jpg"
         val storageRef = storage?.reference?.child("profile_img/$filename")?.child(filename)
 
-            storageRef!!.downloadUrl.addOnSuccessListener {
-                storageRef.delete()
-                val contentDTO = ContentDTO()
-                contentDTO.profileImageUrl = null
-                firestore?.collection("users")?.whereEqualTo("userId", email)?.get()
-                    ?.addOnSuccessListener {
-                        val data = hashMapOf<String, Any?>()
-                        data["profileImageUrl"] = contentDTO.profileImageUrl
+        storageRef!!.downloadUrl.addOnSuccessListener {
+            storageRef.delete()
+            val contentDTO = ContentDTO()
+            contentDTO.profileImageUrl = null
+            firestore?.collection("users")?.whereEqualTo("userId", email)?.get()
+                ?.addOnSuccessListener {
+                    val data = hashMapOf<String, Any?>()
+                    data["profileImageUrl"] = contentDTO.profileImageUrl
 
-                        firestore?.collection("users")?.document(getUid()!!)?.update(data)
-                    }
-                isLoading.value = false
-                finish()
-            }
-            setResult(Activity.RESULT_OK)
+                    firestore?.collection("users")?.document(getUid()!!)?.update(data)
+                }
+            isLoading.value = false
+            finish()
         }
+        setResult(Activity.RESULT_OK)
+    }
 
 
     //갤러리에서 꺼낸 이미지를 세팅해주기.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        when (requestCode){
+        when (requestCode) {
             0 -> {
                 if (resultCode == RESULT_OK) {
                     photoUri = data?.data
@@ -278,26 +283,28 @@ class ProfileUpdateActivity : AppCompatActivity() {
                 }
             }
             1 -> {
-                if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK){
+                if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
                     // 카메라로부터 받은 데이터가 있을경우에만
                     val file = File(currentPhotoPath)
                     if (Build.VERSION.SDK_INT < 28) {
                         val bitmap = MediaStore.Images.Media
                             .getBitmap(contentResolver, Uri.fromFile(file))
-                        photoUri = getImageUri(this,bitmap)
+                        photoUri = getImageUri(this, bitmap)
                         binding.imageView2.setImageURI(photoUri)
-                    }
-                    else{
-                        val decode = ImageDecoder.createSource(this.contentResolver,
-                            Uri.fromFile(file))
+                    } else {
+                        val decode = ImageDecoder.createSource(
+                            this.contentResolver,
+                            Uri.fromFile(file)
+                        )
                         val bitmap = ImageDecoder.decodeBitmap(decode)
-                        photoUri = getImageUri(this,bitmap)
+                        photoUri = getImageUri(this, bitmap)
                         binding.imageView2.setImageURI(photoUri)
                     }
                 }
             }
         }
     }
+
     //이미지를 세팅하기.
     private fun getImage(num: String) {
         val num = getUid()!!

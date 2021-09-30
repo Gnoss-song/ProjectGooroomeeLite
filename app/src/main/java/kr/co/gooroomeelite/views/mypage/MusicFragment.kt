@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kr.co.gooroomeelite.R
 import kr.co.gooroomeelite.adapter.MusicAdapter
-import kr.co.gooroomeelite.databinding.ActivityMusicBinding
 import kr.co.gooroomeelite.databinding.FragmentMusicBinding
 import kr.co.gooroomeelite.views.home.StudyEndActivity
 
@@ -29,7 +28,7 @@ class MusicFragment(val owner : AppCompatActivity) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -42,8 +41,7 @@ class MusicFragment(val owner : AppCompatActivity) : Fragment() {
         binding = FragmentMusicBinding.inflate(inflater,container,false)
         with(binding){
             recyclerview.apply {
-                layoutManager = LinearLayoutManager(owner,
-                    androidx.recyclerview.widget.LinearLayoutManager.VERTICAL,false)
+                layoutManager = LinearLayoutManager(owner, LinearLayoutManager.VERTICAL,false)
                 adapter = MusicAdapter(owner,musicData())
             }
         }

@@ -1,4 +1,5 @@
 package kr.co.gooroomeelite.views.common
+
 /**
  * @author Gnoss
  * @email silmxmail@naver.com
@@ -23,9 +24,9 @@ import kr.co.gooroomeelite.databinding.ActivityOnBoardingBinding
 import kr.co.gooroomeelite.views.mypage.OnBoardingItem
 
 
-class OnBoardingActivity : AppCompatActivity(){
+class OnBoardingActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityOnBoardingBinding
+    private lateinit var binding: ActivityOnBoardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,7 @@ class OnBoardingActivity : AppCompatActivity(){
         setContentView(binding.root)
         val dotsIndicator = findViewById<WormDotsIndicator>(R.id.indicator)
         binding.viewpager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        binding.viewpager2.adapter = ViewPagerAdapter(this@OnBoardingActivity,onBoardingData())
+        binding.viewpager2.adapter = ViewPagerAdapter(this@OnBoardingActivity, onBoardingData())
         binding.viewpager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -42,18 +43,44 @@ class OnBoardingActivity : AppCompatActivity(){
         })
         dotsIndicator.setViewPager2(binding.viewpager2)
     }
+
     private fun onBoardingData(): MutableList<OnBoardingItem> {
         val onBoardingList = mutableListOf<OnBoardingItem>()
         return onBoardingList.apply {
-            add(OnBoardingItem(R.drawable.img_onboarding1,getText(R.string.onboarding_title1).toString(),getText(R.string.onboarding_content1).toString()))
-            add(OnBoardingItem(R.drawable.img_onboarding2,getText(R.string.onboarding_title2).toString(),getText(R.string.onboarding_content2).toString()))
-            add(OnBoardingItem(R.drawable.img_onboarding3,getText(R.string.onboarding_title3).toString(),getText(R.string.onboarding_content3).toString()))
-            add(OnBoardingItem(R.drawable.img_onboarding4,getText(R.string.onboarding_title4).toString(),getText(R.string.onboarding_content4).toString()))
+            add(
+                OnBoardingItem(
+                    R.drawable.img_onboarding1,
+                    getText(R.string.onboarding_title1).toString(),
+                    getText(R.string.onboarding_content1).toString()
+                )
+            )
+            add(
+                OnBoardingItem(
+                    R.drawable.img_onboarding2,
+                    getText(R.string.onboarding_title2).toString(),
+                    getText(R.string.onboarding_content2).toString()
+                )
+            )
+            add(
+                OnBoardingItem(
+                    R.drawable.img_onboarding3,
+                    getText(R.string.onboarding_title3).toString(),
+                    getText(R.string.onboarding_content3).toString()
+                )
+            )
+            add(
+                OnBoardingItem(
+                    R.drawable.img_onboarding4,
+                    getText(R.string.onboarding_title4).toString(),
+                    getText(R.string.onboarding_content4).toString()
+                )
+            )
         }
     }
-    fun indicatorvisible (position: Int){
-        when(position){
-            0,1,2 -> binding.indicator.visibility = View.VISIBLE
+
+    fun indicatorvisible(position: Int) {
+        when (position) {
+            0, 1, 2 -> binding.indicator.visibility = View.VISIBLE
             3 -> binding.indicator.visibility = View.GONE
         }
     }

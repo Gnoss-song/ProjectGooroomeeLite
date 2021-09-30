@@ -1,4 +1,5 @@
 package kr.co.gooroomeelite.views.common
+
 /**
  * @author Gnoss
  * @email silmxmail@naver.com
@@ -27,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
     private val handler = Handler(Looper.getMainLooper())
-    private lateinit var prefs : SharedPreferences
+    private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,12 +38,12 @@ class SplashActivity : AppCompatActivity() {
 
         handler.postDelayed({
             checkFirstRun()
-                            }, 1000L)
+        }, 1000L)
         job()
     }
 
     private fun startProcess() {
-        if(isLogin()) {
+        if (isLogin()) {
             finish()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -59,29 +60,28 @@ class SplashActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun job(){
+    private fun job() {
         val js = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
-        val serviceComponent = ComponentName(this,MyJobService::class.java)
-        val jobInfo = JobInfo.Builder(1,serviceComponent)
+        val serviceComponent = ComponentName(this, MyJobService::class.java)
+        val jobInfo = JobInfo.Builder(1, serviceComponent)
             .setPeriodic(TimeUnit.MINUTES.toMillis(15))
             .build()
         js.schedule(jobInfo)
-        Log.e("TAG","Schedulded JobA")
+        Log.e("TAG", "Schedulded JobA")
     }
 
-    private fun moveToOnBoarding(){
+    private fun moveToOnBoarding() {
         finish()
-        startActivity(Intent(this,OnBoardingActivity::class.java))
+        startActivity(Intent(this, OnBoardingActivity::class.java))
     }
 
-    private fun checkFirstRun(){
+    private fun checkFirstRun() {
         val prefs = getSharedPreferences("Prefs", MODE_PRIVATE)
-        val isfirst :Boolean = prefs.getBoolean("isFirstRun",true)
-        if (isfirst){
-            prefs.edit().putBoolean("isFirstRun",false).apply()
+        val isfirst: Boolean = prefs.getBoolean("isFirstRun", true)
+        if (isfirst) {
+            prefs.edit().putBoolean("isFirstRun", false).apply()
             moveToOnBoarding()
-        }
-        else{
+        } else {
             startProcess()
         }
     }
